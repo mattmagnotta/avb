@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
-
+import Form from "./Form";
 import {
   closeCommentsModal,
   getViewCommentsModalOpen,
@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const CommentModal = () => {
+const CommentModal = (props) => {
   const classes = useStyles();
   const dispatch = useDispatch();
 
@@ -32,7 +32,7 @@ const CommentModal = () => {
       aria-labelledby="simple-modal-title"
       aria-describedby="simple-modal-description"
     >
-      <p>Add Comments</p>
+      <Form handleClose={handleClose} props={props} />
     </Modal>
   );
 };

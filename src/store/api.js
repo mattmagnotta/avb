@@ -1,4 +1,5 @@
 /// mock data as if it came from api
+import React from "react";
 
 export const mockComments = [
   {
